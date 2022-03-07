@@ -5,7 +5,7 @@ def home(request):
     return HttpResponse("Home")
 
 def serivces(request):
-    return HttpResponse("Serivces")
+    return HttpResponse("Services")
 
 def store(request):
     return HttpResponse("Store")
