@@ -1,6 +1,6 @@
 body {
   font-family: 'Lora';
-  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/bg_main.jpg");
+  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/bg_main.jpg");;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -80,7 +80,7 @@ p {
 }
 
 #mainNav {
-  background-color: rgba(24, 64, 8);
+  background-color: darkslateblue;
   font-family: 'Raleway';
 }
 
@@ -100,7 +100,7 @@ p {
 
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
-    font-size: 0.9rem;
+    font-size: 2.0rem;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: rgba(255, 255, 255, 0.4);
@@ -127,14 +127,14 @@ p {
 
 @media (min-width: 992px) {
   .intro .intro-img {
-    width: 75%;
+    width: 100%;
     float: left;
   }
   .intro .intro-text {
-    left: 600;
+    left: 700;
     width: 60%;
-    margin-top: 3rem;
-    background-color: rgba(24, 64, 8);
+    margin-top: 8rem;
+    background-color: darkslateblue;
     color: cornsilk;
     position: absolute;
   }
@@ -148,21 +148,17 @@ p {
 
 @media (min-width: 1200px) {
   .intro .intro-text {
-    width: 45%;
+    width: 70%;
   }
 }
 
-.cta {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: rgb(242, 245, 240);
-}
+
 
 .cta .cta-inner {
   position: relative;
   padding: 3rem;
   margin: 0.5rem;
-  background-color: rgba(24, 64, 8);
+  background-color: darkslateblue;
   color: cornsilk;
 }
 
@@ -229,7 +225,7 @@ p {
 }
 
 .footer {
-   background-color: rgba(24, 64, 8, 0.8);
+   background-color: darkslateblue;
 }
 
 
