@@ -7,8 +7,5 @@ def home(request):
 def store(request):
     return render(request, "ProyectoWebApp/store.html")
 
-def blog(request):
-    return render(request, "ProyectoWebApp/blog.html")
-
 def contact(request):
     return render(request, "ProyectoWebApp/contact.html")
