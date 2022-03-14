@@ -4,18 +4,29 @@
 
 {% block content %}
 <div class="container">
+    <div style="float:right;">
+    
+        <p style="color: white;">Total: {{total_amount_cart}} $</p>
+        
+        {% include "cart/widget.html" %}
+    </div>
+
     <div class="row">
         {% for product in products %}
         <div class="col-md-3">
             <div class="card" style="width: 100%; margin: 9px 9px">
-                
+
                 <img src="{{product.image.url}}" class="card-img-top">
-                
+
                 <div class="card-body" style="text-align: center;">
                     <h7 class="card-title">{{product.name}}</h7>
                     <p class="card-text">{{product.price}}&nbsp;$</p>
-                
-                
+
+
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-success">Add to cart</a>
+
                 </div>
             </div>
         </div>
