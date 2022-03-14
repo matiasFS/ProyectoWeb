@@ -284,3 +284,11 @@ ul.errorlist{
 .linkCategories:hover{
   text-decoration: none;
 }
+
+.formContainer{
+  background-color: darkslateblue;
+  width: 40%;
+  margin: 150px auto;
+  border-radius: 5px;
+  padding: 1px 0px;
+}
