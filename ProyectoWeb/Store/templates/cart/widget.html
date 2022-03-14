@@ -2,7 +2,7 @@
     <thead>
         <tr>
             <th colspan="3" class="text-center">
-                Shoppin cart
+                Shopping cart
             </th>
         </tr>
         <tr>
@@ -11,4 +11,24 @@
             <th>Price</th>
         </tr>
     </thead>
+    <tbody>
+        {% if request.session.cart.items %}
+            {% for key, value in request.session.cart.items %}
+                <tr class="text-center">
+                    <th>{{value.name}}</th>
+                    <th>{{value.quantity}}</th>
+                </tr>
+
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="3">
+                    <div class="alert-danger text-center">
+                        It's empty
+                    </div>
+                </td>    
+
+            </tr>
+        {% endif %}
+    </tbody>
 </table>
