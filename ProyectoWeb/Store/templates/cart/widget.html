@@ -17,6 +17,13 @@
                 <tr class="text-center">
                     <th>{{value.name}}</th>
                     <th>{{value.quantity}}</th>
+                    <td>
+                        <a href="{% url 'cart:add' value.product_id %}" class="btn btn-success">+</a>
+                        <a href="{% url 'cart:subtract' value.product_id %}" class="btn btn-success">-</a><br/>
+
+                        {{value.price}} $
+                   
+                    </td>
                 </tr>
 
             {% endfor %}
@@ -31,4 +38,11 @@
             </tr>
         {% endif %}
     </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">
+                Total: {{total_amount_cart}} $ 
+            </td>
+        </tr>
+    </tfoot>
 </table>
