@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'Contact',
     'Store',
     'cart',
+    'authentication',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -137,7 +139,7 @@ EMAIL_HOST_USER = ""
 EMAIL_HOST_PASSWORD = ""
 
 
-
+CRISPY_TEMPLATE_PACK='bootstrap4'
 
 
 # Default primary key field type
