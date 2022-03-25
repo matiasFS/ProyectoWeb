@@ -43,9 +43,9 @@
     </div>
     <div style="text-align: right; margin-right: 100px; color: white;">
       {% if user.is_authenticated %}
-        Hola {{user.username}}! <a href="{% url 'logout' %}">Logout</a>
+        Hola {{user.username}}! <a href="{% url 'logout' %}" style="color: white;" >Logout</a>
       {% else %}
-        <a href="authentication">Register</a>&nbsp;&nbsp;&nbsp; <a href="{% url 'login' %}">Login</a>
+        <a href="authentication" style="color: white;">Register</a>&nbsp;&nbsp;&nbsp; <a href="{% url 'login' %}" style="color: white;">Login</a>
       {% endif %}
     </div>
   </nav>
