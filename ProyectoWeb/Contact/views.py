@@ -27,4 +27,4 @@ def contact(request):
             except:
                 return redirect("/contact/?invalid")
 
-    return render(request, "Contact/contact.html", {"contactForm": contactForm})
+    return render(request, "contact/contact.html", {"contactForm": contactForm})

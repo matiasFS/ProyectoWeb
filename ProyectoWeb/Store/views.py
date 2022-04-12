@@ -5,4 +5,4 @@ from Store.models import Products
 # Create your views here.
 def store(request):
     products = Products.objects.all()
-    return render(request, "Store/store.html", {"products": products})
+    return render(request, "store/store.html", {"products": products})
