@@ -5,5 +5,4 @@ urlpatterns = [
     path('', RegisterView.as_view(), name="authentication"),
     path('logout', log_out, name="logout"),
     path('login', log_in, name="login"),
-
 ]

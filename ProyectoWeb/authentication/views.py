@@ -43,7 +43,7 @@ def log_in(request):
                 return redirect('Home')
             else:
                 messages.error(request, "User not valid")
-        else:
+        else: 
             messages.error(request, "Incorrect information")
     
     form = AuthenticationForm()   
