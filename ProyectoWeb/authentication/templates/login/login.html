@@ -8,9 +8,18 @@
 <div class="formContainer">
     <form action="" method="POST" style="text-align: center;">
         {% csrf_token %}
+        
         <table style="color: white; margin: 20px auto;">{{form|crispy}}</table>
+            {% if messages %}
+                <ul class="messages">
+                {% for message in messages %}
+                    <span class="alert alert-{{ message.tags }}">{{ message }}</span>
+                {% endfor %}
+                </ul>
+            {% endif %}
         <input type="submit" value="Login" class="btn btn-success">
     </form>
+    
 
 
 </div>

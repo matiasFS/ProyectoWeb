@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 
+# Mensajes de error
+from django.contrib.messages import constants as error_messages
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -141,6 +144,13 @@ EMAIL_HOST_PASSWORD = ""
 
 CRISPY_TEMPLATE_PACK='bootstrap4'
 
+MESSAGE_TAGS={
+    error_messages.DEBUG: 'debug',
+    error_messages.INFO: 'info',
+    error_messages.SUCCESS: 'success',
+    error_messages.WARNING: 'warning',
+    error_messages.ERROR: 'danger',
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
