@@ -45,7 +45,7 @@
       {% if user.is_authenticated %}
         Hola {{user.username}}! <a href="{% url 'logout' %}" style="color: white;" >Logout</a>
       {% else %}
-        <a href="authentication" style="color: white;">Register</a>&nbsp;&nbsp;&nbsp; <a href="{% url 'login' %}" style="color: white;">Login</a>
+        <a href="{% url 'authentication' %}" style="color: white;">Register</a>&nbsp;&nbsp;&nbsp; <a href="{% url 'login' %}" style="color: white;">Login</a>
       {% endif %}
     </div>
   </nav>
