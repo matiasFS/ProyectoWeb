@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.db.models import F, Sum, FloatField
+from Store.models import Products
 # Create your models here.
 User = get_user_model()
 
@@ -25,10 +26,10 @@ class Pedido(models.Model):
 
 class NotaPedido(models.Model):
     user = models.ForeignKey(User, on_delete = models.CASCADE)
-    product_id = models.ForeignKey(Product, on_delete = models.CASCADE)
+    product_id = models.ForeignKey(Products, on_delete = models.CASCADE)
     pedido_id = models.ForeignKey(Pedido, on_delete = models.CASCADE)
     cantidad = models.IntegerField(default = 1)
-    created_at = models.DateTimeField(auto)
+    created_at = models.DateTimeField(auto_now_add = True)
 
     def __str__(self):
         return f'{self.cantidad} + unidades de {self.product_id.nombre}'
