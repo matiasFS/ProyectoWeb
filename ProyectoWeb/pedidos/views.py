@@ -12,12 +12,12 @@ from django.core.mail import send_mail
 @login_required(login_url = "/authentication/login")
 def procesar_pedido(request):
     pedido = Pedido.objects.create(user = request.user)
-    carro = Cart(request)
+    cart = Cart(request)
     notaPedido = list()
-    for key, value in carro.carro.items():
+    for key, value in cart.cart.items():
         notaPedido.append(NotaPedido(
             product_id = key,
-            quantity = value["quantity"],
+            cantidad = value["quantity"],
             user = request.user,
             pedido = pedido
         ))
@@ -26,8 +26,8 @@ def procesar_pedido(request):
     enviar_mail(
        pedido = pedido,
        notaPedido = notaPedido,
-       nombreusuario = request.username,
-       emailusuario = request.usermail
+       nombreusuario = request.user.username,
+       emailusuario = request.user.email
     )
     messages.success(request, "El pedido se ha creado correctamente")
 
@@ -43,7 +43,7 @@ def enviar_mail(**kwargs):
     })
     
     mensaje_texto= strip_tags(mensaje)
-    from_email="marinadepaola67@gmail.com"
-    to=kwargs.get("emailusuario")
+    from_email=""
+    to=""
     
     send_mail(asunto, mensaje_texto, from_email,[to],html_message=mensaje)

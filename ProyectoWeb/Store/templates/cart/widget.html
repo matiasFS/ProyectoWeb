@@ -44,11 +44,13 @@
                 Total: {{total_amount_cart}} $ 
             </td>
         </tr>
+        {% if request.session.cart.items %}
         <tr>
             <td colspan="3" style="text-align: center">
-                <a href="#" class="btn btn-success">Hacer pedido</a>
+                <a href="{% url 'pedidos:ProcesarPedidos' %}" class="btn btn-success">Hacer pedido</a>
             
             </td>
         </tr>
+        {% endif %}
     </tfoot>
 </table>
